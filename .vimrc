@@ -5,6 +5,10 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " 運行 pathogen
 execute pathogen#infect()
 
+call pathogen#helptags()
+
+set laststatus=2
+
 " 定義快速鍵的首碼，即<Leader>
 let mapleader=";"
 
@@ -14,8 +18,7 @@ set cursorline
 " 文字編碼加入 utf8
 set enc=utf8
 
-" 高亮當前行 (水平)
-set cursorline
+
 
 " 高亮當前列 (垂直)
 " set cursorcolumn
@@ -50,32 +53,25 @@ set incsearch
 " 總是顯示狀態欄
 set laststatus=2
 
+" Set to auto read when a file is changed from the outside
+set autoread
+
+"Always show current position
+set ruler
+
+" 設定目前行高亮
+colorscheme desert
+set cursorline
+hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
+
+" 高亮當前行 (水平)
+" set cursorline
+
+let g:indentLine_color_term = 239
+let g:indentLine_char = '¦'
+
+
 " 開啟即時搜索功能
 " set incsearch
 " 搜索時大小寫不敏感
 " set ignorecase
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

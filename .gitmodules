@@ -4,3 +4,12 @@
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
 	url = git@github.com:Lokaltog/vim-powerline.git
+[submodule "bundle/vim-indent-guides"]
+	path = bundle/vim-indent-guides
+	url = git@github.com:nathanaelkane/vim-indent-guides.git
+[submodule "bundle/vim-indentLine"]
+	path = bundle/vim-indentLine
+	url = git@github.com:Yggdroot/indentLine.git
+[submodule "bundle/vim-indent"]
+	path = bundle/vim-indent
+	url = git@github.com:Yggdroot/indentLine.git
