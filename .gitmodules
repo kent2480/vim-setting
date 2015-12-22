@@ -13,3 +13,9 @@
 [submodule "bundle/vim-indent"]
 	path = bundle/vim-indent
 	url = git@github.com:Yggdroot/indentLine.git
+[submodule "bundle/railscasts-theme"]
+	path = bundle/railscasts-theme
+	url = git@github.com:jpo/vim-railscasts-theme.git
+[submodule "bundle/vim-nerd-tree"]
+	path = bundle/vim-nerd-tree
+	url = git@github.com:scrooloose/nerdtree.git

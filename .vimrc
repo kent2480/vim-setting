@@ -4,21 +4,24 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 " 運行 pathogen
 execute pathogen#infect()
-
 call pathogen#helptags()
-
-set laststatus=2
 
 " 定義快速鍵的首碼，即<Leader>
 let mapleader=";"
+
+" 語法上色顯示
+" 設定目前行高亮
+syntax on
+colorscheme railscasts
+set t_Co=256
+set cursorline
+set nu
 
 " 啟用行游標提示
 set cursorline
 
 " 文字編碼加入 utf8
 set enc=utf8
-
-
 
 " 高亮當前列 (垂直)
 " set cursorcolumn
@@ -29,7 +32,7 @@ set number
 " 開啟不相容模式(vi)
 set nocompatible
 
-" 語法上色顯示
+
 syntax on        
 
 " 用 space 代替 tab
@@ -59,16 +62,29 @@ set autoread
 "Always show current position
 set ruler
 
-" 設定目前行高亮
-colorscheme desert
-set cursorline
-hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
+" hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
 
 " 高亮當前行 (水平)
 " set cursorline
 
 let g:indentLine_color_term = 239
 let g:indentLine_char = '¦'
+
+" taglist
+nnoremap <silent> <F12> :TlistToggle<CR>
+
+set csto:0   
+set cscopetag 
+set nocsverb
+
+cs add $ANDROID_SRC/cscope/cscope.out $ANDROID_SRC/cscope 
+set csverb           
+set tags:./tags,tags,$ANDROID_SRC/cscope/tags 
+
+" nerd tree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
 
 
 " 開啟即時搜索功能
