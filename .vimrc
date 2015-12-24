@@ -84,8 +84,8 @@ set tags:./tags,tags,$ANDROID_SRC/cscope/tags
 " nerd tree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-map <C-n> :NERDTreeToggle<CR>
-
+" map <C-n> :NERDTreeToggle<CR>
+map <silent> <F11> :NERDTreeToggle<CR>
 
 " 開啟即時搜索功能
 " set incsearch
